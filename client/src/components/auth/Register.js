@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 class Register extends Component {
   constructor() {
     super();
@@ -11,9 +12,11 @@ class Register extends Component {
       errors: {}
     };
   }
+
   onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
+
   onSubmit = e => {
     e.preventDefault();
     const newUser = {
@@ -24,6 +27,7 @@ class Register extends Component {
     };
     console.log(newUser);
   };
+
   render() {
     const { errors } = this.state;
     return (
@@ -104,4 +108,5 @@ class Register extends Component {
     );
   }
 }
+
 export default Register;
